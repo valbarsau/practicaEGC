@@ -5,4 +5,5 @@ echo SEDITOR
 declarar un commit por script
 es importante documentar bien los cambios par que en el futuro no haya problema para recordarlo
 cuando se quede pillado el comando de log etc, usar la q
+git reset --hard para deshacer todos los cambios
 
