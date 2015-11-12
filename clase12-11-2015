@@ -6,4 +6,16 @@ declarar un commit por script
 es importante documentar bien los cambios par que en el futuro no haya problema para recordarlo
 cuando se quede pillado el comando de log etc, usar la q
 git reset --hard para deshacer todos los cambios
+git diff HEAD > fichero.patch compara cabeceras con los cambios, ve diferencias incrementales 
+git apply fichero.patch restaura sin hacer commit o antes
+Se pueden deshacer cambios en local
+git reflog
+git reset HEAD~n donde n son los n ultimos cambios
+git checkout para deshacer algo que no esta en add
+
+Reescribir la historia de un repositorio publico es un lio.
+Reescribir la historia  solo en local
+git revert id-commit
+git revert HEAD^n como con ~
+Para salir de log Q
 
