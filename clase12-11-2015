@@ -1,0 +1,8 @@
+man git <comando> en el cmd o en google para ver el manual
+para cambiar el editor de texto
+export EDITOR=gedit
+echo SEDITOR 
+declarar un commit por script
+es importante documentar bien los cambios par que en el futuro no haya problema para recordarlo
+cuando se quede pillado el comando de log etc, usar la q
+

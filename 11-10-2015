@@ -1,0 +1,336 @@
+naruto@naruto-X555LDB:~$ cd Escritorio
+naruto@naruto-X555LDB:~/Escritorio$ cd cuarto
+naruto@naruto-X555LDB:~/Escritorio/cuarto$ cd egc
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git init
+Initialized empty Git repository in /home/naruto/Escritorio/cuarto/egc/.git/
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git status
+En la rama master
+
+Commit inicial
+
+nada que hacer (crear/copiar archivos y utilice «git add» para continuar)
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git add remote practicaEGC https://github.com/valbarsau/practicaEGC
+fatal: pathspec «remote» no coincide con ningún archivo
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote add practicaEGC https://github.com/valbarsau/practicaEGC
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote -v
+practicaEGC	https://github.com/valbarsau/practicaEGC (fetch)
+practicaEGC	https://github.com/valbarsau/practicaEGC (push)
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git pull practicEGC
+fatal: 'practicEGC' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remot
+git: «remot» no es una orden de git. Vea «git --help»
+
+¿Se refiere a este?
+	remote
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote
+practicaEGC
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote remov
+error: Unknown subcommand: remov
+uso: git remote [-v | --verbose]
+   o: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   o: git remote rename <old> <new>
+   o: git remote remove <name>
+   o: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   o: git remote [-v | --verbose] show [-n] <name>
+   o: git remote prune [-n | --dry-run] <name>
+   o: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   o: git remote set-branches [--add] <name> <branch>...
+   o: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   o: git remote set-url --add <name> <newurl>
+   o: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote remove practicaEGC
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote -v
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote add practicaEGC https://github.com/valbarsau/practicaEGC.git
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote -v
+practicaEGC	https://github.com/valbarsau/practicaEGC.git (fetch)
+practicaEGC	https://github.com/valbarsau/practicaEGC.git (push)
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git pull
+fatal: No remote repository specified.  Please, specify either a URL or a
+remote name from which new revisions should be fetched.
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git pull practicaEGC
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+De https://github.com/valbarsau/practicaEGC
+ * [new branch]      master     -> practicaEGC/master
+You asked to pull from the remote 'practicaEGC', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git pull practicaEGC/master
+fatal: 'practicaEGC/master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git pull practicaEGC practicaEGC/master
+fatal: Couldn't find remote ref practicaEGC/master
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote rename
+uso: git remote rename <old> <new>
+
+
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git remote rename practicaEGC origin
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git pull origin master
+De https://github.com/valbarsau/practicaEGC
+ * branch            master     -> FETCH_HEAD
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ cd .git
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc/.git$ ls
+branches  description  HEAD   index  logs     refs
+config    FETCH_HEAD   hooks  info   objects
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc/.git$ cd..
+cd..: no se encontró la orden
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc/.git$ cd ..
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ ls
+README.md
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git status
+En la rama master
+nothing to commit, working directory clean
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git status
+En la rama master
+nothing to commit, working directory clean
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git status
+En la rama master
+Archivos sin seguimiento:
+  (use «git add <archivo>...» para incluir en lo que se ha de confirmar)
+
+	hola.txt
+
+no se ha agregado nada al commit pero existen archivos sin seguimiento (use «git add» para darle seguimiento)
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git add hola.txt
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git status
+En la rama master
+Cambios para hacer commit:
+  (use «git reset HEAD <archivo>...» para sacar del stage)
+
+	nuevo archivo: hola.txt
+
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git commit -a
+[master 6186f5b] Haciendo commit de un archivo txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hola.txt
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git status
+En la rama master
+nothing to commit, working directory clean
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git log
+commit 6186f5b2a64606070259d50a86d75b40141a43c9
+Author: valbarsau <valentinbarquero@gmail.com>
+Date:   Wed Nov 11 23:05:26 2015 +0100
+
+    Haciendo commit de un archivo txt
+
+commit 3d35ab417ae729028203d47bdfa7c43b932c5e50
+Author: valbarsau <valentinbarquero@gmail.com>
+Date:   Thu Nov 5 13:09:54 2015 +0100
+
+    Initial commit
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ ls
+hola.txt  README.md
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git annotate hola.txt
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git annotate hola
+fatal: cannot stat path 'hola': No existe el archivo o el directorio
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git annotate hola
+fatal: cannot stat path 'hola': No existe el archivo o el directorio
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git annotate hola.txt
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git commit -a
+En la rama master
+nothing to commit, working directory clean
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ gdit hola.txt
+No se ha encontrado la orden «gdit», quizás quiso decir:
+ La orden «gedit» del paquete «gedit» (main)
+ La orden «edit» del paquete «mime-support» (main)
+ La orden «gdis» del paquete «gdis» (universe)
+ La orden «git» del paquete «git» (main)
+ La orden «dgit» del paquete «dgit» (universe)
+gdit: no se encontró la orden
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ gedit hola.txt
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git status
+En la rama master
+Cambios no preparados para el commit:
+  (use «git add <archivo>...» para actualizar lo que se confirmará)
+  (use «git checkout -- <archivo>...» para descartar cambios en el directorio de trabajo)
+
+	modificado:    hola.txt
+
+Archivos sin seguimiento:
+  (use «git add <archivo>...» para incluir en lo que se ha de confirmar)
+
+	hola.txt~
+
+no hay cambios agregados al commit (use «git add» o «git commit -a»)
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git add hola.txt
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git status
+En la rama master
+Cambios para hacer commit:
+  (use «git reset HEAD <archivo>...» para sacar del stage)
+
+	modificado:    hola.txt
+
+Archivos sin seguimiento:
+  (use «git add <archivo>...» para incluir en lo que se ha de confirmar)
+
+	hola.txt~
+
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git commit -a
+[master 6b99a8e] Haciendo cambio en hola txt
+ 1 file changed, 1 insertion(+)
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git commit -6b99a8e
+error: unknown switch `6'
+uso: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <archivo>  read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <archivo>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit hook
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git show commit -6b99a8e
+fatal: ambiguous argument 'commit': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git show 6b99a8e
+commit 6b99a8e5473c42ffaaa0bac8ed146a9307af6fe4
+Author: valbarsau <valentinbarquero@gmail.com>
+Date:   Wed Nov 11 23:40:13 2015 +0100
+
+    Haciendo cambio en hola txt
+
+diff --git a/hola.txt b/hola.txt
+index e69de29..5c1b149 100644
+--- a/hola.txt
++++ b/hola.txt
+@@ -0,0 +1 @@
++hola
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git annotate hola
+fatal: cannot stat path 'hola': No existe el archivo o el directorio
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git annotate hola.txt
+6b99a8e5        ( valbarsau     2015-11-11 23:40:13 +0100       1)hola
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git push origin master
+Username for 'https://github.com': valbarsau
+Password for 'https://valbarsau@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 555 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/valbarsau/practicaEGC.git
+   3d35ab4..6b99a8e  master -> master
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git status
+En la rama master
+Archivos sin seguimiento:
+  (use «git add <archivo>...» para incluir en lo que se ha de confirmar)
+
+	hola.txt~
+
+no se ha agregado nada al commit pero existen archivos sin seguimiento (use «git add» para darle seguimiento)
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git ignore
+git: «ignore» no es una orden de git. Vea «git --help»
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Find by binary search the change that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git pull origin master
+De https://github.com/valbarsau/practicaEGC
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git annotate hola.txt
+6b99a8e5        ( valbarsau     2015-11-11 23:40:13 +0100       1)hola
+naruto@naruto-X555LDB:~/Escritorio/cuarto/egc$ git log
+commit 6b99a8e5473c42ffaaa0bac8ed146a9307af6fe4
+Author: valbarsau <valentinbarquero@gmail.com>
+Date:   Wed Nov 11 23:40:13 2015 +0100
+
+    Haciendo cambio en hola txt
+
+commit 6186f5b2a64606070259d50a86d75b40141a43c9
+Author: valbarsau <valentinbarquero@gmail.com>
+Date:   Wed Nov 11 23:05:26 2015 +0100
+
+    Haciendo commit de un archivo txt
+
+commit 3d35ab417ae729028203d47bdfa7c43b932c5e50
+Author: valbarsau <valentinbarquero@gmail.com>
+Date:   Thu Nov 5 13:09:54 2015 +0100
+
+
